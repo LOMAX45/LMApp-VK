@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LoginView.swift
 //  LMApp-VK
 //
 //  Created by Максим Лосев on 28.06.2022.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
     
     @State private var login = ""
     @State private var password = ""
@@ -130,8 +130,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView()
     }
 }
