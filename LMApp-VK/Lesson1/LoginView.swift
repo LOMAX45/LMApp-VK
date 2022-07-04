@@ -10,9 +10,11 @@ import Combine
 
 struct LoginView: View {
     
+    // MARK: - @State propertyes
     @State private var login = ""
     @State private var password = ""
     @State private var shouldShowLogo: Bool = true
+    @State private var showWrongCredentialsAlert = false
     
     private let keyboardIsOnPublisher = Publishers.Merge(
         NotificationCenter.default.publisher(for: UIResponder.keyboardWillChangeFrameNotification)
@@ -22,6 +24,17 @@ struct LoginView: View {
     )
         .removeDuplicates()
     
+    // MARK: - Functions
+    private func checkCredentialsData() {
+        if login == "user" && password == "Qwerty" {
+            print("Login successfull")
+        } else {
+            showWrongCredentialsAlert = true
+        }
+        password = ""
+    }
+    
+    // MARK: - Views (UI)
     var body: some View {
         
         ZStack {
@@ -52,6 +65,7 @@ struct LoginView: View {
                             .foregroundColor(Color.gray)
                         TextField("", text: $login)
                             .frame(maxWidth: 300, maxHeight: 48)
+                            .textInputAutocapitalization(.never)
                         Text("Пароль:")
                             .font(.callout)
                             .fontWeight(.bold)
@@ -62,8 +76,9 @@ struct LoginView: View {
                     .padding([.bottom], 12)
                     
                     HStack {
+
                         Button {
-                            print("Attempting to logon")
+                            self.checkCredentialsData()
                         } label: {
                             Label("Войти", systemImage: "chevron.right.2")
                         }
@@ -79,7 +94,9 @@ struct LoginView: View {
                         Spacer()
                         
                         Button {
-                            print("Logon cancelled")
+                            login = ""
+                            password = ""
+                            UIApplication.shared.endEditing()
                         } label: {
                             Label("Отмена", systemImage: "xmark")
                         }
@@ -126,6 +143,9 @@ struct LoginView: View {
         }
         .onTapGesture {
             UIApplication.shared.endEditing()
+        }
+        .alert(isPresented: $showWrongCredentialsAlert) {
+            Alert(title: Text("Ошибка"), message: Text("Неверный логин или пароль.") )
         }
     }
 }
