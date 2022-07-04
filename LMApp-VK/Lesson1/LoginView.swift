@@ -15,6 +15,7 @@ struct LoginView: View {
     @State private var password = ""
     @State private var shouldShowLogo: Bool = true
     @State private var showWrongCredentialsAlert = false
+    @Binding var isUserLoggedIn: Bool
     
     private let keyboardIsOnPublisher = Publishers.Merge(
         NotificationCenter.default.publisher(for: UIResponder.keyboardWillChangeFrameNotification)
@@ -26,8 +27,8 @@ struct LoginView: View {
     
     // MARK: - Functions
     private func checkCredentialsData() {
-        if login == "user" && password == "Qwerty" {
-            print("Login successfull")
+        if login == "user" && password == "qwerty" {
+            isUserLoggedIn = true
         } else {
             showWrongCredentialsAlert = true
         }
@@ -150,8 +151,8 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//    }
+//}

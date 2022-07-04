@@ -8,22 +8,25 @@
 import SwiftUI
 
 struct UserCellView: View {
+    
+    var friend: Friend
+    
     var body: some View {
         
         HStack {
             
-            Image("koala")
+            Image(friend.avatar)
                 .resizable()
                 .frame(width: 64, height: 64)
             
             VStack(alignment: .leading, spacing: 8) {
-                Text("Коала Австралиева")
+                Text(friend.name)
                     .lineLimit(1)
                     .font(.system(size: 19, weight: .bold, design: .default))
                     .foregroundColor(Color.vkColorBlue)
                     
                 
-                Text("Институт благородных коал")
+                Text(friend.education)
                     .lineLimit(1)
                     .font(.system(size: 15, weight: .regular, design: .default))
                     .foregroundColor(Color.vkColorBlue)
@@ -32,14 +35,12 @@ struct UserCellView: View {
 
             Spacer()
         }
-        .padding([.leading, .top, .bottom], 4)
         .shadow(color: .gray, radius: 2, x: 5, y:5)
-        .border(.gray, width: 1.0)
     }
 }
 
-struct UserCellView_Previews: PreviewProvider {
-    static var previews: some View {
-        UserCellView()
-    }
-}
+//struct UserCellView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        UserCellView()
+//    }
+//}
