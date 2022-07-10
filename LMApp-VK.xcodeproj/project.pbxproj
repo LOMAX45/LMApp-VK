@@ -8,19 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		C153ACA9286B740600C83C1B /* LMApp_VKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153ACA8286B740600C83C1B /* LMApp_VKApp.swift */; };
-		C153ACAB286B740600C83C1B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153ACAA286B740600C83C1B /* ContentView.swift */; };
+		C153ACAB286B740600C83C1B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153ACAA286B740600C83C1B /* LoginView.swift */; };
 		C153ACAD286B740B00C83C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C153ACAC286B740B00C83C1B /* Assets.xcassets */; };
 		C153ACB0286B740B00C83C1B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C153ACAF286B740B00C83C1B /* Preview Assets.xcassets */; };
 		C153ACB7286B85A900C83C1B /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C153ACB6286B85A800C83C1B /* Extentions.swift */; };
+		C1FD0D86286D86E4003ACFF9 /* PrototypeCellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD0D85286D86E4003ACFF9 /* PrototypeCellsView.swift */; };
+		C1FD0D8A286D8770003ACFF9 /* UserCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD0D89286D8770003ACFF9 /* UserCellView.swift */; };
+		C1FD0D8C286D877E003ACFF9 /* GroupCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD0D8B286D877E003ACFF9 /* GroupCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C153ACA5286B740600C83C1B /* LMApp-VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LMApp-VK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C153ACA8286B740600C83C1B /* LMApp_VKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMApp_VKApp.swift; sourceTree = "<group>"; };
-		C153ACAA286B740600C83C1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C153ACAA286B740600C83C1B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C153ACAC286B740B00C83C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C153ACAF286B740B00C83C1B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C153ACB6286B85A800C83C1B /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		C1FD0D85286D86E4003ACFF9 /* PrototypeCellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeCellsView.swift; sourceTree = "<group>"; };
+		C1FD0D89286D8770003ACFF9 /* UserCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellView.swift; sourceTree = "<group>"; };
+		C1FD0D8B286D877E003ACFF9 /* GroupCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				C153ACA8286B740600C83C1B /* LMApp_VKApp.swift */,
-				C153ACAA286B740600C83C1B /* ContentView.swift */,
+				C1FD0D87286D86F2003ACFF9 /* Lesson1 */,
 				C153ACAC286B740B00C83C1B /* Assets.xcassets */,
 				C153ACAE286B740B00C83C1B /* Preview Content */,
-				C153ACB6286B85A800C83C1B /* Extentions.swift */,
 			);
 			path = "LMApp-VK";
 			sourceTree = "<group>";
@@ -68,6 +73,26 @@
 				C153ACAF286B740B00C83C1B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C1FD0D87286D86F2003ACFF9 /* Lesson1 */ = {
+			isa = PBXGroup;
+			children = (
+				C153ACAA286B740600C83C1B /* LoginView.swift */,
+				C1FD0D88286D86FF003ACFF9 /* Lesson2 */,
+				C153ACB6286B85A800C83C1B /* Extentions.swift */,
+			);
+			path = Lesson1;
+			sourceTree = "<group>";
+		};
+		C1FD0D88286D86FF003ACFF9 /* Lesson2 */ = {
+			isa = PBXGroup;
+			children = (
+				C1FD0D85286D86E4003ACFF9 /* PrototypeCellsView.swift */,
+				C1FD0D89286D8770003ACFF9 /* UserCellView.swift */,
+				C1FD0D8B286D877E003ACFF9 /* GroupCellView.swift */,
+			);
+			path = Lesson2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C153ACAB286B740600C83C1B /* ContentView.swift in Sources */,
+				C153ACAB286B740600C83C1B /* LoginView.swift in Sources */,
 				C153ACA9286B740600C83C1B /* LMApp_VKApp.swift in Sources */,
 				C153ACB7286B85A900C83C1B /* Extentions.swift in Sources */,
+				C1FD0D8A286D8770003ACFF9 /* UserCellView.swift in Sources */,
+				C1FD0D8C286D877E003ACFF9 /* GroupCellView.swift in Sources */,
+				C1FD0D86286D86E4003ACFF9 /* PrototypeCellsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
